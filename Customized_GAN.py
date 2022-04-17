@@ -162,7 +162,7 @@ class GAN:
         sess = tf.Session()
         saver = tf.train.Saver()
         if self.file_name == None:
-            saver.restore(sess, "./model/gan/_GAN_Model.ckpt")
+            saver.restore(sess, "./model/gan/GAN_Model.ckpt")
         else:
             saver.restore(sess, "./model/gan/"+self.file_name+"_GAN_Model.ckpt")
         generated_data = sess.run(self.generator_sample, feed_dict={self.generator_input: z})
